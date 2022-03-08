@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Peter Drohan</title>
+	<link href="{% static '/css/main.css'  %}" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	
+</head>
+<body>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Peter Drohan</h1>
+    <p class="lead">Welcome to my Personal Website</p>
+  </div>
+</div>
+	<br>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="card card-body h-100  border-info" id="profile-wrapper">
+                    <img src="{% static '/images/selfie2.png' %}">
+					<hr>
+					<h4>About Me</h4>
+					<p>I am an Industrial Engineering Student passionate about all things data</p>
+				</div>
+			</div>
+
+			<div class="col-md-9">
+				<div class="card card-body h-100  border-info">
+					<h4>Motivations</h4>
+					<hr>
+					<p>I am an Industrial Engineering student studying at Dalhousie University in Halifax, Nova Scotia. Through my education and co-op opportunities I have become increasingly aware of highly valued skills in the workforce. To me, the underlying theme has been data.</p>
+					<p>As an Industrial Engineer, I knew I would not be exposed to some these tools through my education, so I took it upon myself to learn. I knew my programming skills and statistical knowledge I had acquired already through my education would make a good base for this continued learning. </p>
+					<p>I leveraged my C skills to learn python, and I continued to develop my SQL skills to land a Data Analysis position at Canadian Tire Corporation </p>
+					<p>I plan to expand on these skills, and continue to learn to eventually land a Data Science position after graduation</p>
+					<p>I am looking for Data Science and Data Analytics opportunities for Summer 2021</p>
+
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="card card-body h-100">
+					<h5>My Experience</h5>
+					<hr>
+					<p>I am currently working for Canadian Tire Corporation as a Data Analyst Co-op student. At work, I am responsible for everything from front facing customer reports to data extraction, transformation and manipulation for further analysis  </p>
+					<p>I chose this role, to get exposed to big distributed data and to gain experience in python, ETL, data analysis and manipulation</p>
+					<p>I also had co-op terms at IMP Areospace & Defence and Nova Scotia Power</p>
+					</div>
+			</div>
+
+			<div class="col-md-6">
+				<div class="card card-body h-100">
+					<h5>Technical Skills</h5>
+					<hr>
+					<p>I have work experience in python, SQL, pyspark (Apache Spark), Hadoop, as well as Excel, Knime and PowerBI</p>
+					<p>In my free time I have taught myself Django, basic bootstrap, HTML&CSS as well as the popular Data Science libraries</p>
+					<p>I display this knowledge through personal projects </p>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="card card-body h-100">
+					<h5>Personal Projects</h5>
+					<hr>
+					<p>Built and launched a Wine suggestion application using Django's rest API framework</p>
+
+					<p>Method Foods: Bi-weekly meal plans and grocery lists catered to your dietary preferences and fitness goals </p>
+				</div>
+			</div>
+
+			<div class="col-md-6">
+				<div class="card card-body h-100">
+					<h5>My Short Term Goals</h5>
+				<hr>
+				<p>Continue to learn and develop at work, as well as expand on my skills through personal projects.</p>
+				<p>I hope to secure a Data Science co-op or intern role for summer 2021 and finish my undergraduate degree May 2022</p>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="card card-body h-100">
+					<h5>Areas of Interest</h5>
+					<hr>
+					<p>Data Engineering, Data Science & Analytics, Machine Learning</p>
+					<p>Systems Engineering, Supply Chain & Logistics, Operations Research, Project Management</p>
+				</div>
+			</div>
+
+			<div class="col-md-6">
+				<div class="card card-body h-100">
+					<h5>Favourite Problems</h5>
+				<hr>
+				<p>The bin packing problem - DHL Supply Chain Competition</p>
+				</div>
+			</div>
+		</div>
+		<br>
+	</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+{% endblock %}

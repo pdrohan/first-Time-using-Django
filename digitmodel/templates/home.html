@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Handwritten Digit Prediction</title>
+<!--    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <style type="text/css">
+        body {
+            margin:0; padding:0;
+            }
+        #content {
+           width:280px;
+           height:280px;
+           margin: 0 auto;
+           margin-top:50px;
+           border:1px dotted black;
+           background-color: #DFF;
+           }
+         #title {
+            width:300px;
+            margin: 0 auto;
+            text-align:center;
+            margin-top:30px;
+         }
+    </style>
+</head>
+
+<body>
+    <div id="title"><h2>Draw a number from Zero to Nine</h2></div>
+    <div id="content">
+        <canvas id="myCanvas" width="280" height="280"></canvas>
+        <script src="{% static 'js/digitrec2.js' %}"></script>
+    </div>
+
+    <div id="ans" align="Center"><h3>Result</h3>
+        <button type="submit" class="btn btn-primary" id="predict">Submit</button>
+
+    </div>
+
+</body>
+</html>

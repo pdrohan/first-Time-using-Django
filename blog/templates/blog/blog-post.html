@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/modern-business.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- Page Content -->
+  <div class="container">
+    <h1 class="mt-4 mb-3">{{ object.title }}
+<!--      <small>by-->
+<!--        <a href="#">Start Bootstrap</a>-->
+<!--      </small>-->
+    </h1>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="http://127.0.0.1:8000/blog/">Blog</a>
+      </li>
+      <li class="breadcrumb-item active">Blog Post</li>
+    </ol>
+
+    <div class="row">
+
+      <!-- Post Content Column -->
+      <div class="col-lg-8">
+        <!-- Preview Image -->
+        <img class="img-fluid rounded" src="{{object.image.url}}" alt="">
+        <hr>
+        <!-- Date/Time -->
+        <p>Posted on {{ object.pubdate }}</p>
+        <hr>
+        <!-- Post Content -->
+        <p class="lead">{{ object.prelude }} </p>
+
+        <blockquote class="blockquote">
+          <p class="mb-0">{{ object.content }}</p>
+          <footer class="blockquote-footer">{{ object.author }}
+
+          </footer>
+        </blockquote>
+
+        <hr>
+        <!-- Comments Form -->
+        <div class="card my-4">
+          <h5 class="card-header">Leave a Comment:</h5>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <textarea class="form-control" rows="3"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+
+<!--        &lt;!&ndash; Single Comment &ndash;&gt;-->
+<!--        <div class="media mb-4">-->
+<!--          <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">-->
+<!--          <div class="media-body">-->
+<!--            <h5 class="mt-0">Commenter Name</h5>-->
+<!--            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash; Comment with nested comments &ndash;&gt;-->
+<!--        <div class="media mb-4">-->
+<!--          <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">-->
+<!--          <div class="media-body">-->
+<!--            <h5 class="mt-0">Commenter Name</h5>-->
+<!--            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.-->
+
+<!--            <div class="media mt-4">-->
+<!--              <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">-->
+<!--              <div class="media-body">-->
+<!--                <h5 class="mt-0">Commenter Name</h5>-->
+<!--                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.-->
+<!--              </div>-->
+<!--            </div>-->
+
+<!--            <div class="media mt-4">-->
+<!--              <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">-->
+<!--              <div class="media-body">-->
+<!--                <h5 class="mt-0">Commenter Name</h5>-->
+<!--                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.-->
+<!--              </div>-->
+<!--            </div>-->
+
+<!--          </div>-->
+<!--        </div>-->
+
+      </div>
+
+      <!-- Sidebar Widgets Column -->
+      <div class="col-md-4">
+        <!-- Side Widget -->
+        <div class="card my-4">
+          <h5 class="card-header">Summary</h5>
+          <div class="card-body">
+            If you have any questions please feel free to reach out to me through the Contact Page. I would love to discuss this topic!
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+          <br><br><br>
+</body>
+{% endblock %}
+
+</html>

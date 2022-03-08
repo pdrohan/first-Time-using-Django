@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/modern-business.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- Page Content -->
+  <div class="container">
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Blog</h1>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="http://127.0.0.1:8000">Home</a>
+      </li>
+      <li class="breadcrumb-item active">Blog</li>
+    </ol>
+
+    <div class="row">
+
+      <!-- Blog Entries Column -->
+      <div class="col-md-8">
+{% for instance in object_list %}
+        <!-- Blog Post -->
+        <div class="card mb-4">
+          <img class="card-img-top" src="{{instance.image.url}}" alt="Card image cap">
+          <div class="card-body">
+            <h2 class="card-title">{{ instance.title }}</h2>
+            <p class="card-text"> {{ instance.prelude }}</p>
+            <a href="{{ instance.get_absolute_url }}" class="btn btn-primary">Read More &rarr;</a>
+          </div>
+          <div class="card-footer text-muted">
+            Posted on {{ instance.pubdate }}
+          </div>
+        </div>
+{% endfor %}
+
+      </div>
+      <!-- Sidebar Widgets Column -->
+      <div class="col-md-4">
+        <!-- Side Widget -->
+        <div class="card my-4">
+          <h5 class="card-header">Side Note</h5>
+          <div class="card-body">This is a simple bare-bones blog, designed to document my progress.</div>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+{% endblock %}
+</html>
